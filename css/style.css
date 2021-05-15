@@ -1,0 +1,914 @@
+@charset "UTF-8";
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Helvetica Neue", "Arial", "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+	font-size: 1.6rem;
+	background: url(../img/seamless-bg.jpg);
+	line-height: 1
+}
+
+header {
+	width: 100%;
+	height: 65px;
+	margin: 40px auto 0;
+}
+
+.preload {
+	transition: 0 !important;
+}
+
+a {
+	text-decoration: none;
+	transition: .3s all ease;
+	color: #ce7e5b;
+}
+
+a:hover {
+	color: #91563b;
+}
+
+h1 a {
+	width: auto;
+	font-family: 'Caudex', serif;
+	font-weight: 400;
+	font-size: 6rem;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+}
+
+nav a {
+	margin-left: 30px;
+}
+
+#navi {
+	position: relative;
+}
+
+.dropdown_btn {
+	padding-bottom: 10px;
+}
+
+.dropdown {
+	display: none;
+	position: absolute;
+	width: 120px;
+	top: 20px;
+	left: -7px;
+	border: 1px solid #290a0a;
+	border-bottom: 0;
+	z-index: 99999;
+}
+
+.dropdown a {
+	display: block;
+	background-color: #3e1717;
+	border-bottom: 1px solid #290a0a;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin: auto;
+}
+
+.dropdown a:hover {
+	background-color: #2a0c0c;
+	color: #ce7e5b;
+}
+
+.nav-for-sp {
+	display: none;
+}
+
+h3 {
+	font-size: 3rem;
+	color: #ce7e5b;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.content-2 h3{
+	margin-top: 60px;
+}
+
+ul {
+	list-style: none;
+}
+
+footer {
+	height: 45px;
+	font-size: 1.4rem;
+	text-align: center;
+	color: #ce7e5b;
+}
+
+.header_flex {
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header_h2 {
+	color: #aa806e;
+	font-size: 1.6rem;
+}
+
+main {
+	width: 100%;
+	max-width: 1000px;
+	margin: 70px auto 40px;
+}
+
+.list-cat img {
+	box-shadow: 2px 3px 16px #000;
+	transition: .3s all ease;
+}
+
+.list-cat img:hover {
+	transform: translateY(-5px);
+}
+
+.flex-bb10 {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 10px solid #643921;
+	box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bookrack-for-sp,
+.bookrack-for-tb {
+	display: none;
+	border-bottom: 10px solid #643921;
+	width: 100%;
+	height: 10px;
+	margin-bottom: 40px;
+	box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+	z-index: -99;
+}
+
+.upper_list {
+	margin-bottom: 140px;
+}
+
+.btn_type_big {
+	display: block;
+	background-color: #8b3f1d;
+	width: 405px;
+	height: 50px;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 13px;
+	margin: 0 auto 20px;
+	box-shadow: -2px 2px 1px #c66c46;
+	transition: .3s all;
+}
+
+.btn_type_big:hover {
+	background-color: #602d16;
+	color: #fff;
+}
+
+@media screen and (max-width:1050px) {
+	.dropdown {
+		left: -48px
+	}
+}
+
+@media screen and (max-width:820px) {
+	.header_flex {
+		justify-content: space-around;
+	}
+
+	.header_h2 {
+		width: 280px;
+		line-height: 1.5
+	}
+
+	.flex-bb10 {
+		flex-wrap: wrap;
+	}
+
+	.bookrack-for-tb {
+		display: block;
+	}
+
+	.upper_list,
+	.under_list {
+		margin-bottom: 30px;
+	}
+
+	.btn_type_big {
+		width: 80vw;
+	}
+
+	.nav-for-pc {
+		display: none;
+	}
+
+	.nav-for-sp {
+		display: block;
+	}
+
+	.dropdown {
+		left: -9px;
+	}
+}
+
+
+@media screen and (max-width:550px) {
+	html {
+		font-size: 50%;
+	}
+
+	h1 a {
+		font-size: 4.5rem;
+	}
+
+	.header_h2 {
+		width: 200px;
+		line-height: 1.2;
+	}
+
+	main {
+		margin-top: 50px;
+	}
+
+	.bookrack-for-tb {
+		display: none;
+	}
+
+	.bookrack-for-sp {
+		display: block;
+	}
+
+	.dropdown {
+		left: -50px;
+	}
+
+	.flex-bb10 {
+		margin-bottom: 40px;
+	}
+}
+
+/*-----
+登録フォーム
+-----*/
+.formbox {
+	position: relative;
+	width: 400px;
+	height: 573px;
+	margin: 0 auto;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.85);
+}
+
+.formbox input[type=text],
+.formbox input[type=password] {
+	display: block;
+	width: 250px;
+	font-size: 2rem;
+	color: #fff;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background-color: transparent;
+	margin: 0 auto;
+	padding-top: 125px;
+}
+
+.btn_type_submit {
+	display: block;
+	font-family: 'Noto Sans JP', sans-serif;
+	width: 250px;
+	height: 35px;
+	border: none;
+	outline: none;
+	background-color: #561616;
+	color: #fff;
+	border-radius: 13px;
+	margin: 125px auto 0;
+	cursor: pointer;
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+	transition: .3s all;
+}
+
+.btn_type_submit:hover {
+	background-color: #2a0c0c;
+}
+
+::placeholder {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 1.6rem !important;
+	color: #afafaf;
+}
+
+.errormessage {
+	color: #ffaaaa;
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.password_area {
+	position: relative;
+}
+
+.password_area .field-icon {
+	position: absolute;
+	color: #fff;
+	right: 50px;
+	bottom: 5px;
+}
+
+.regist_form {
+	background: url(../img/registform_bg.png) top center/ contain no-repeat;
+}
+
+@media screen and (max-width: 480px) {
+	.formbox {
+		width: 315px;
+		height: 450px;
+	}
+
+	.btn_type_submit {
+		margin: 60px auto 0;
+	}
+}
+
+
+/*-----
+登録完了
+-----*/
+.registed_text {
+	margin-bottom: 40px;
+}
+
+.registed_text p {
+	color: #fff;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+/*-----
+ログイン画面
+-----*/
+.login_form {
+	background: url(../img/loginform_bg.png) top center/ contain no-repeat;
+}
+
+.formbox_below {
+	width: 200px;
+	margin: 40px auto 0;
+	color: #fff;
+}
+
+.formbox_below a {
+	color: #fff;
+}
+
+.formbox_below a:hover {
+	text-decoration: underline;
+}
+
+.formbox_below_inner {
+	margin-bottom: 20px;
+}
+
+.formbox_below_inner:last-child {
+	margin-bottom: 0;
+}
+
+/*-----
+マイページ
+-----*/
+.account_info_container {
+	width: 100%;
+	max-width: 800px;
+	height: 300px;
+	padding: 40px 100px;
+	margin: 0 auto 60px;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 60px;
+}
+
+.account_info_container p {
+	color: #fff;
+	font-size: 2.5rem;
+}
+
+.account_info_container span {
+	font-size: 2.9rem;
+}
+
+.btn_mypage {
+	display: block;
+	font-family: "Noto Sans JP", sans-serif;
+	width: 250px;
+	height: 35px;
+	outline: none;
+	border: none;
+	background-color: #561616;
+	color: #fff;
+	border-radius: 13px;
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	line-height: 35px;
+	margin-top: 60px;
+	transition: .3s all;
+}
+
+.btn_mypage:hover {
+	background-color: #2a0c0c;
+	color: #fff;
+}
+
+@media screen and (max-width:480px) {
+	.account_info_container {
+		padding: 20px;
+		border-radius: 20px;
+	}
+}
+
+/*-----
+パスワード変更
+-----*/
+.password_form {
+	background: url(../img/passwordform_bg.png) top center/ contain no-repeat;
+}
+
+.password_form .btn_type_submit {
+	background-color: #162756;
+}
+
+.password_form .btn_type_submit:hover {
+	background-color: #0c142a;
+}
+
+/*-----
+アカウント削除
+-----*/
+.delete_form {
+	background: url(../img/deleteform_bg.png) top center/ contain no-repeat;
+	position: relative;
+}
+
+.delete_form p {
+	width: 250px;
+	color: #fff;
+	padding: 70px 0 0;
+	margin: 0 auto;
+	font-size: 2rem;
+}
+
+.red_txt {
+	color: #ce3333 !important;
+}
+
+.delete_form input[type=password],
+.delete_form input[type=text] {
+	padding-top: 70px;
+}
+
+.delete_form .btn_type_submit {
+	padding: 0;
+	background-color: #16562a;
+}
+
+.delete_form .btn_type_submit:hover {
+	background-color: #0c2a12;
+}
+
+/*-----
+書評
+-----*/
+.recommend_form_box {
+	width: 100%;
+	max-width: 1000px;
+	height: 680px;
+	padding: 40px 60px;
+	background-color: rgba(0, 0, 0, 0.30);
+	border-radius: 60px;
+	margin: 0 auto;
+}
+
+.recommend_form label {
+	color: #fff;
+}
+
+.recommend_form input[type=text],
+select {
+	width: 250px;
+	height: 21px;
+	font-size: 1.6rem;
+	color: #fff;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background-color: transparent;
+	margin: 0 auto;
+}
+
+select:focus {
+	background-color: #2e2e2e;
+	border-radius: 5px;
+}
+
+option:focus {
+	background-color: #2e2e2e;
+}
+
+.column_flex {
+	width: 100%;
+	max-width: 800px;
+	height: 600px;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+.recommend_form_heading {
+	display: inline-block;
+	width: 280px;
+	color: #fff;
+	font-size: 1.8rem;
+}
+
+.required {
+	color: #ff5e5e;
+	font-size: 1.2rem;
+	vertical-align: bottom;
+	margin-left: 5px;
+}
+
+.q1 {
+	display: flex;
+}
+
+.q1_checkbox {
+	padding-left: 70px;
+}
+
+.q1_checkbox label {
+	margin-right: 5px;
+}
+
+.q1_checkbox,
+.q3 {
+	display: flex;
+}
+
+.q1_checkbox,
+.q2,
+.q3_radio,
+.q4 {
+	max-width: 600px;
+	display: flex;
+	flex-wrap: wrap
+}
+
+.recommend_form_btn {
+	margin: 0 auto;
+}
+
+input[type=radio],
+input[type=checkbox],
+label {
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 999px) {
+	.recommend_form_box {
+		height: 680px;
+		padding: 20px;
+		background-color: rgba(0, 0, 0, 0.30);
+		border-radius: 30px;
+	}
+
+	.column_flex {
+		margin: 0 auto;
+	}
+
+	.q1_checkbox,
+	.q3_radio {
+		padding-left: 55px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.recommend_form_box {
+		background-color: rgba(0, 0, 0, 0.30);
+		border-radius: 30px;
+		height: auto
+	}
+
+	.recommend_form_heading {
+		margin-bottom: 10px;
+		color: #ce7e5b;
+	}
+
+	.column_flex {
+		margin: 0 auto;
+		height: auto
+	}
+
+	.column_flex div {
+		display: flex;
+		align-items: flex-end;
+		flex-wrap: wrap;
+	}
+
+	.q1,
+	.q3 {
+		display: block;
+	}
+
+	.q1_checkbox,
+	.q3_radio {
+		padding-left: 0;
+	}
+
+	.q1_parts,
+	.q2_parts,
+	.q3_parts,
+	.q4_parts {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.recommend_form_section {
+		margin-bottom: 30px;
+	}
+}
+
+/*-----
+書評確認
+-----*/
+.recommend_check p {
+	font-size: 1.8rem;
+	color: #fff;
+}
+
+.check_message {
+	color: #ffb960 !important;
+	font-size: 2rem !important;
+}
+
+@media screen and (max-width:600px){
+	.recommend_check p{
+		line-height: 2;
+	}
+}
+
+/*-----
+投稿リスト
+-----*/
+.undefined_list {
+	height: 50vh;
+	line-height: 50vh;
+	color: #ffaaaa;
+	font-size: 4rem;
+	text-align: center;
+	padding: 50px;
+}
+
+@media screen and (max-width: 768px) {
+	.undefined_list {
+		line-height: 1.5;
+		font-size: 3rem;
+	}
+}
+
+/*-----
+カードデザイン
+-----*/
+.card {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto 30px;
+	padding: 10px;
+	border: 1px solid #290a0a;
+	background-color: #3e1717;
+	transition: .3s all;
+}
+
+.card__a:hover {
+	color: #ce7e5b;
+}
+
+.card:hover {
+	background-color: #2a0c0c;
+}
+
+.card__meta {
+	display: flex;
+	align-items: center;
+}
+
+.card__id {
+	margin-right: 10px;
+}
+
+.card__cat {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 6px 12px;
+	margin-bottom: 2px;
+	background: #d09408;
+	color: #fff;
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-size: 1.4rem;
+}
+
+.card__poster {
+	margin-left: 10px;
+}
+
+.card__time {
+	margin: 0 0 0 auto;
+	font-size: 1.2rem;
+	color: #9c9c9c;
+}
+
+.card__desc {
+	display: flex;
+	flex-flow: column;
+	margin-top: 10px;
+}
+
+.card__desc p {
+	margin-top: 10px;
+}
+
+.card__ttl {
+	font-size: 2.5rem;
+	margin-right: 20px;
+}
+
+.card__author {
+	font-weight: 700;
+	font-size: 1.8rem;
+}
+
+/*-----
+詳細ページ
+-----*/
+.book_info_box {
+	width: 95%;
+	max-width: 950px;
+	height: 659px;
+	background: url(../img/book_open.png) top center/contain no-repeat;
+	padding: 20px 60px;
+	margin: 0 auto;
+	color: #804545;
+	font-size: 1.8rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.book_info_box_inner-left {
+	width: 400px;
+}
+
+.book_info_box_inner-right {
+	width: 400px;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	padding-top: 34px;
+}
+
+.info__meta {
+	display: flex;
+	align-items: flex-end;
+	font-weight: 500;
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+.meta-post_id {
+	font-weight: 700;
+	font-size: 2.4rem;
+	margin-bottom: 10px;
+}
+
+.meta-author {
+	margin-left: 20px;
+	font-size: 1.8rem;
+}
+
+.meta-date {
+	text-align: right;
+}
+
+.meta-date-for-sp {
+	display: none;
+}
+
+.info-ttl {
+	font-size: 3.6rem;
+	margin-bottom: 10px;
+	word-wrap: break-word;
+	line-height: 4rem;
+}
+
+.info-author {
+	font-size: 2.4rem;
+}
+
+.info-desc {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+table {
+	width: 100%;
+	max-width: 400px;
+}
+
+td {
+	padding-bottom: 10px;
+}
+
+.info-val {
+	padding-left: 10px;
+	max-width: 225px;
+}
+
+.btn-search {
+	width: 100%;
+	max-width: 400px;
+	margin: 10px 0 20px 10px;
+}
+
+.fa-external-link-alt {
+	font-size: 1.3rem;
+	margin-left: 5px;
+}
+
+.posting_controller {
+	text-align: end;
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	.book_info_box {
+		height: auto;
+		background: url(none) rgba(0, 0, 0, 0.3);
+		border-radius: 40px;
+		padding: 20px 60px;
+		margin: 0 auto;
+		color: #fff;
+		display: block;
+		justify-content: space-between;
+	}
+
+	.book_info_box_inner-left {
+		width: auto;
+	}
+
+	.book_info_box_inner-right {
+		width: auto;
+	}
+
+	.meta-date {
+		display: none;
+	}
+
+	.meta-date-for-sp {
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	.btn-search {
+		margin: 10px auto 20px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.book_info_box {
+		padding: 20px;
+	}
+}
